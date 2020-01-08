@@ -1,7 +1,7 @@
 # Cryption
 ---
 
-<img src="img/cryption.png" height="399" width="599">   
+<img style="align:center" src="img/cryption.png" height="320" width="476">   
 ## A Basic Encryption Decryption text editor
 Implementation of different types of ciphers to be used on files and string input.    
 Here are the following algorithms implemented so far:   

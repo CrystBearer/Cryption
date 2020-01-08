@@ -1,6 +1,6 @@
 # Cryption
 ---
-<p align="center"><img src="img/cryption.png" width="350"></p>
+<p align="center"><img src="img/cryption.png" width="480"></p>
 
 ## A Basic Encryption Decryption text editor
 Implementation of different types of ciphers to be used on files and string input.    

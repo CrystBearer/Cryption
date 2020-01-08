@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Cryption">
+    <output-path>$PROJECT_DIR$/out/artifacts/Cryption</output-path>
+    <root id="root">
+      <element id="archive" name="Cryption.jar">
+        <element id="module-output" name="Cryption" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:13" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:13" />
+    </root>
+  </artifact>
+</component>

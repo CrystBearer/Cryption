@@ -34,9 +34,10 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.3</version>
                 <configuration>
                     <mainClass>org.vin.App</mainClass>
+                    <launcher>launcher</launcher>
                 </configuration>
             </plugin>
         </plugins>

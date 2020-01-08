@@ -12,7 +12,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 /**
- * JavaFX App
+ * User Application that allows simple encryption and decryption of selected text
  */
 public class App extends Application {
 

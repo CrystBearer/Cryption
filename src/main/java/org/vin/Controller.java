@@ -90,7 +90,7 @@ public class Controller {
     }
 
     /**
-     *
+     * Cancel button to turns back to the original file content as it first started
      * @param e
      */
     @FXML
@@ -100,8 +100,8 @@ public class Controller {
 
 
     /**
-     *
-     * @param e
+     * Encrypts/Decrypts the file content
+     * @param e event
      */
     @FXML
     protected void cryptAction(ActionEvent e){

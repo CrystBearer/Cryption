@@ -1,4 +1,5 @@
-# Basic Encryption Decryption
+# Cryption
+## A Basic Encryption Decryption text editor
 Implementation of different types of ciphers to be used on files and string input.    
 Here are the following algorithms implemented so far:   
 1. Caesar

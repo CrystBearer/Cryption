@@ -51,13 +51,14 @@ public class Model {
 
 
     /**
-     * Save new content into original file
+     * Save new content into original file and replaces original string
      * @param newContent content taken from the TextArea
      * @return True if successfully save, False if failed to save
      */
     protected boolean saveFile(String newContent){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(currentFile));
+            originalFileContent = newContent;
             bw.write(newContent);
             bw.close();
             return true;
@@ -69,7 +70,7 @@ public class Model {
 
 
     /**
-     * Save file to new location selected by the user
+     * Save file to new location selected by the user and replaces original string
      * @param newFile the new file location stored in File Class
      * @param newContent content taken from the TextArea
      * @return True if successfully save, False if failed to save
@@ -77,6 +78,7 @@ public class Model {
     protected boolean saveFile(File newFile, String newContent){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(newFile));
+            originalFileContent = newContent;
             bw.write(newContent);
             bw.close();
             return true;

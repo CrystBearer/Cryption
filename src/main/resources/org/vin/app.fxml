@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F2D2D;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.vin.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F2D2D;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.vin.Controller">
    <children>
       <MenuBar fx:id="menuBar" style="-fx-background-color: #FFA800;">
         <menus>
@@ -18,7 +18,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Mode">
             <items>
-                  <RadioMenuItem mnemonicParsing="false"  text="Encrypt">
+                  <RadioMenuItem mnemonicParsing="false" text="Encrypt">
                      <toggleGroup>
                         <ToggleGroup fx:id="modes" />
                      </toggleGroup></RadioMenuItem>
@@ -31,20 +31,20 @@
                      <toggleGroup>
                         <ToggleGroup fx:id="ciphers" />
                      </toggleGroup></RadioMenuItem>
-                  <RadioMenuItem mnemonicParsing="false" text="Caesar" toggleGroup="$ciphers"/>
+                  <RadioMenuItem mnemonicParsing="false" text="Caesar" toggleGroup="$ciphers" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
       <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #2F2D2D;">
         <items>
-          <Button mnemonicParsing="false" text="Apply" onAction="#cryptAction"  fx:id="applyBtn"/>
-            <Button contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Cancel"  onAction="#revertAction" fx:id="cancelBtn" />
+          <Button fx:id="applyBtn" mnemonicParsing="false" onAction="#cryptAction" text="Apply" />
+            <Button fx:id="cancelBtn" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#revertAction" text="Cancel" />
         </items>
       </ToolBar>
-      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="401.0" prefWidth="416.0" style="-fx-background-color: #2F2D2D;">
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="401.0" prefWidth="416.0" style="-fx-background-color: #2F2D2D;" stylesheets="@styles.css" VBox.vgrow="ALWAYS">
          <content>
-            <TextArea fx:id="textAreaContent" prefHeight="373.0" prefWidth="478.0" style="-fx-background-color: #2F2D2D;" wrapText="true" />
+            <TextArea fx:id="textAreaContent" prefHeight="373.0" prefWidth="478.0" style="-fx-background-color: #2F2D2D;" styleClass="textAreaContent" stylesheets="@styles.css" wrapText="true" />
          </content>
       </ScrollPane>
    </children>

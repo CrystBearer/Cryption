@@ -20,6 +20,11 @@ public class App extends Application {
         launch();
     }
 
+    /**
+     * Initializes the window and shows to the user
+     * @param primaryStage
+     * @throws IOException
+     */
     @Override
     public void start(Stage primaryStage) throws IOException {
         int width = 600;
@@ -30,7 +35,8 @@ public class App extends Application {
         myData = new Model(myController); // Instantiates Controller class in Model class
         myController.setModel(myData); // Instantiates Model class in Controller class
         scene = new Scene(root);
-
+        String css = getClass().getResource("/org/vin/styles.css").toExternalForm();
+        scene.getStylesheets().add(css);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Cryption");
         primaryStage.initStyle(StageStyle.UNIFIED);

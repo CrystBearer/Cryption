@@ -12,7 +12,7 @@ public class Encrypt {
     public Encrypt(){
         this.algorithms = new HashMap<String, Algorithm>(5);
         this.algorithms.put("caesar", new CaesarCipher());
-        this.algorithms.put("bacon", new BaconianCipher());
+        this.algorithms.put("baconian", new BaconianCipher());
     }
 
     /**
@@ -22,6 +22,7 @@ public class Encrypt {
      * @return encrypted string
      */
     public String encrypt(File input, String name){
+        name = name.toLowerCase();
         String encryptedOutput = "";
         if(this.algorithms.containsKey(name)){
             String key = this.getKey(name);
@@ -52,7 +53,26 @@ public class Encrypt {
      * @return encrypted string
      */
     public String encrypt(String input, String name){
+        name = name.toLowerCase();
         String key = this.getKey(name);
+        if(this.algorithms.containsKey(name)){
+            String encryptedOutput = this.algorithms.get(name).encrypt(input,key);
+            return encryptedOutput;
+        } else {
+            throw new RuntimeException("\""+input+"\"" + " algorithm does not exist.");
+        }
+    }
+
+
+    /**
+     * Encrypts the given File
+     * @param input File of the given path from the command line
+     * @param name algorithm name
+     * @param key  Key depending on the algorithm
+     * @return encrypted string
+     */
+    public String encrypt(String input, String name, String key){
+        name = name.toLowerCase();
         if(this.algorithms.containsKey(name)){
             String encryptedOutput = this.algorithms.get(name).encrypt(input,key);
             return encryptedOutput;
@@ -74,7 +94,7 @@ public class Encrypt {
                 System.out.println("Enter key: ");
                 key = scan.next();
                 break;
-            case "bacon":
+            case "baconian":
                 break;
             default:
                 throw new RuntimeException("\""+algoName+"\"" + " algorithm does not exist.");

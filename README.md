@@ -28,7 +28,7 @@ Clone this project and open with IntellJ.
 
 ## Authors  
 
-* **Vin** - *Initial work* - [CrystBearer](https://github.com/CrystBearer)
+* **Vin** - *Initial work* - [CrystlBearer](https://github.com/CrystlBearer)
 
 ## License
 
